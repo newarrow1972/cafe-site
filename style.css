@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fbf6ee;
+  --bg-card: #ffffff;
+  --ink: #3b2c23;
+  --ink-dim: #7a6a5d;
+  --accent: #b5693c;
+  --accent-dark: #7c4426;
+  --line: rgba(59, 44, 35, 0.12);
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.85;
+}
+
+h1, h2, h3, .logo, .btn {
+  font-family: "Noto Serif JP", "Playfair Display", serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Nav */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: rgba(251, 246, 238, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--accent-dark);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar a {
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-dim);
+  transition: color 0.2s;
+}
+
+.navbar a:hover { color: var(--accent); }
+
+/* Hero */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding: 0 6%;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(181, 105, 60, 0.12), transparent 55%),
+    linear-gradient(180deg, #fbf6ee, #f3e9da);
+}
+
+.hero-text { max-width: 620px; }
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--accent-dark);
+}
+
+.hero-sub {
+  margin-top: 24px;
+  color: var(--ink-dim);
+  font-size: 1rem;
+}
+
+.btn {
+  margin-top: 34px;
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 2px;
+  background: var(--accent-dark);
+  color: #fbf6ee;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn.small {
+  margin-top: 16px;
+  padding: 10px 24px;
+  font-size: 0.82rem;
+}
+
+/* Sections */
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 70px 6% 40px;
+}
+
+section { margin-bottom: 120px; scroll-margin-top: 90px; }
+
+.tag {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+  color: var(--accent-dark);
+}
+
+/* Concept */
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.concept-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 30px 24px;
+}
+
+.concept-card .icon {
+  font-size: 1.7rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.concept-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--accent-dark);
+}
+
+.concept-card p {
+  color: var(--ink-dim);
+  font-size: 0.92rem;
+}
+
+/* Menu */
+.menu-list {
+  display: grid;
+  gap: 26px;
+}
+
+.menu-item {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+}
+
+.menu-row .price {
+  font-weight: 500;
+}
+
+.menu-item p {
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.gallery-box {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Access */
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.access-grid h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--accent-dark);
+}
+
+.access-grid p {
+  color: var(--ink-dim);
+  font-size: 0.92rem;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--ink-dim);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .navbar ul { display: none; }
+  .concept-grid, .access-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
