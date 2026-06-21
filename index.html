@@ -17,11 +17,17 @@
     <li><a href="#concept">Concept</a></li>
     <li><a href="#menu">Menu</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#voice">Voice</a></li>
     <li><a href="#access">Access</a></li>
   </ul>
 </nav>
 
 <header class="hero">
+  <video class="hero-bg" autoplay muted loop playsinline
+    poster="https://images.pexels.com/photos/34353697/pexels-photo-34353697.jpeg?auto=compress&cs=tinysrgb&w=1600">
+    <source src="https://videos.pexels.com/video-files/4585695/4585695-hd_1280_720_30fps.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
   <div class="hero-text">
     <p class="eyebrow">SELF-ROASTED COFFEE & SMALL KITCHEN</p>
     <h1>静かな時間に、<br>ひと匙の幸せを。</h1>
@@ -53,6 +59,20 @@
     </div>
   </section>
 
+  <section id="latte-art" class="latte-art">
+    <div class="latte-text">
+      <span class="tag">CRAFT</span>
+      <h2>一杯ごとに、<br>心を込めて。</h2>
+      <p>注ぐ速度とミルクの泡立て方ひとつで、表情が変わるラテアート。同じ一杯は、二つとありません。</p>
+    </div>
+    <div class="latte-video-frame">
+      <video class="latte-video" autoplay muted loop playsinline
+        poster="https://images.pexels.com/photos/31570984/pexels-photo-31570984.jpeg?auto=compress&cs=tinysrgb&w=600">
+        <source src="https://videos.pexels.com/video-files/30068397/12897042_2160_3840_30fps.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
   <section id="menu" class="menu">
     <span class="tag">MENU</span>
     <h2>メニュー</h2>
@@ -80,10 +100,41 @@
     <span class="tag">GALLERY</span>
     <h2>店内の様子</h2>
     <div class="gallery-grid">
-      <img class="gallery-box" src="https://images.pexels.com/photos/17130636/pexels-photo-17130636.jpeg?auto=compress&cs=tinysrgb&w=500" alt="店内の様子1">
-      <img class="gallery-box" src="https://images.pexels.com/photos/18721982/pexels-photo-18721982.jpeg?auto=compress&cs=tinysrgb&w=500" alt="店内の様子2">
-      <img class="gallery-box" src="https://images.pexels.com/photos/5865422/pexels-photo-5865422.jpeg?auto=compress&cs=tinysrgb&w=500" alt="店内の様子3">
-      <img class="gallery-box" src="https://images.pexels.com/photos/34746696/pexels-photo-34746696.jpeg?auto=compress&cs=tinysrgb&w=500" alt="店内の様子4">
+      <figure class="gallery-item">
+        <img class="gallery-box" src="https://images.pexels.com/photos/17130636/pexels-photo-17130636.jpeg?auto=compress&cs=tinysrgb&w=500" alt="窓際の落ち着いた席">
+        <figcaption>窓際のカウンター席</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img class="gallery-box" src="https://images.pexels.com/photos/18721982/pexels-photo-18721982.jpeg?auto=compress&cs=tinysrgb&w=500" alt="緑に囲まれた客席">
+        <figcaption>緑に囲まれた客席</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img class="gallery-box" src="https://images.pexels.com/photos/5865422/pexels-photo-5865422.jpeg?auto=compress&cs=tinysrgb&w=500" alt="焙煎の様子">
+        <figcaption>焙煎・抽出スペース</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img class="gallery-box" src="https://images.pexels.com/photos/34746696/pexels-photo-34746696.jpeg?auto=compress&cs=tinysrgb&w=500" alt="店内の温かい灯り">
+        <figcaption>夕方の灯り</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="voice" class="voice">
+    <span class="tag">VOICE</span>
+    <h2>お客様の声</h2>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <p>「一人でも気兼ねなく長居できる、貴重な場所です。コーヒーの香りで一日の始まりが変わります。」</p>
+        <span class="voice-name">— 30代 / 常連のお客様</span>
+      </div>
+      <div class="voice-card">
+        <p>「ランチプレートの野菜がいつも新鮮で、季節を感じられるのが楽しみです。」</p>
+        <span class="voice-name">— 40代 / 近隣にお住まいの方</span>
+      </div>
+      <div class="voice-card">
+        <p>「静かで落ち着いた雰囲気なので、読書や仕事にも使わせてもらっています。」</p>
+        <span class="voice-name">— 20代 / 学生のお客様</span>
+      </div>
     </div>
   </section>
 
@@ -101,8 +152,9 @@
       </div>
       <div>
         <h3>ご予約</h3>
-        <p>お電話または下記フォームよりご連絡ください。</p>
-        <a href="#" class="btn small">予約フォームへ</a>
+        <p>お電話、またはメールでご連絡ください。</p>
+        <a href="tel:0312345678" class="btn small">📞 0312345678</a>
+        <a href="mailto:reserve@cafe-lumiere.example?subject=ご予約について&body=お名前:%0d%0a人数:%0d%0aご希望日時:" class="btn small outline">✉️ メールで予約</a>
       </div>
     </div>
   </section>
